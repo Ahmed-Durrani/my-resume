@@ -1,60 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Resume</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <hr />
-    <h2>Summary</h2>
-    <img src="./me.jpeg" alt="a picture of me" height="250" />
-    <p>
-      My name is Ahmed Durrani, I am studying at FAST NUCES, Pakistan. I am in
-      my 2nd year of BS Electrical Engineering.
-    </p>
-    <h2>Education</h2>
-    <ul>
-      <li>O levels in Pre-Engineering from Beacon Light Academy, Pakistan.</li>
-      <li>A levels in Pre-Engineering from Beacon Light Academy, Pakistan.</li>
-      <li>BS Electrical Engineering (2026) from FAST NUCES, Pakistan.</li>
-    </ul>
-    <h2>Skills</h2>
-    <ul>
-      <li>C++</li>
-      <li>Java</li>
-      <li>HTML/CSS</li>
-    </ul>
-    <h2>Awards/Certificates</h2>
-    <h4>Coder's cup</h4>
-    <img
-      src="./certificate.png"
-      alt="Coder's cup participation certificate"
-      height="200"
-    />
-    <p>
-      The above image is the certificate for my participation in one my
-      university's coding events.
-    </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ahmed Durrani</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            padding: 40px;
+            max-width: 850px; /* Standard A4 width approximation for screen */
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    <h4>My Semester Project</h4>
-    <img src="./preview.png" alt="preview of project" height="200" />
-    <p>
-      The above image is a preview of one of my accomplishments. It is one of my
-      semester projects. A website built using HTML/CSS and a little JS. You can
-      learn more about the project
-      <a
-        href="https://www.linkedin.com/feed/update/urn:li:activity:7064614665481256961?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7064614665481256961%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BMsVJqbRyRVqHwM1AOSYu5A%3D%3D"
-        >here.</a
-      >
-    </p>
+        /* Typography */
+        h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
 
-    <br />
-    <a href="./contact.html">Get in touch with me</a> or
-    <a href="./hobbies.html">learn more about me</a>
+        .header-contact {
+            text-align: center;
+            font-size: 10pt;
+            margin-bottom: 20px;
+        }
 
-    <footer>© 2023 Ahmed Durrani</footer>
-  </body>
+        .header-contact span {
+            margin: 0 5px;
+        }
+
+        .header-contact a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Entry Layout */
+        .entry {
+            margin-bottom: 10px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 11pt;
+        }
+
+        .entry-subheader {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            font-size: 10.5pt;
+            margin-bottom: 2px;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: disc;
+            margin-top: 2px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 10.5pt;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+
+        /* Skills Section */
+        .skills-section p {
+            font-size: 10.5pt;
+            margin: 3px 0;
+        }
+
+        .skill-label {
+            font-weight: 700;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                padding: 0; /* Remove padding for print to use full page */
+                max-width: 100%;
+            }
+            @page {
+                margin: 0.5in 0.5in 0.5in 0.5in; /* Standard print margins */
+                size: auto;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Ahmed Durrani</h1>
+        <div class="header-contact">
+            Gulshan-e-Iqbal, Karachi, Pakistan <br>
+            <a href="mailto:ahmeddurrani03@gmail.com">ahmeddurrani03@gmail.com</a> <span>|</span>
+            <a href="https://www.linkedin.com/in/ahmed-durrani-4411511b6/">LinkedIn</a> <span>|</span>
+            <a href="https://github.com/Ahmed-Durrani">GitHub</a> <span>|</span>
+            +92 309 7442280
+        </div>
+    </header>
+
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <span>National University of Computer & Emerging Sciences (FAST)</span>
+                <span>Karachi, Pakistan</span>
+            </div>
+            <div class="entry-subheader">
+                <span>Bachelors in Electrical Engineering — CGPA: 3.02</span>
+                <span>2022 – 2026</span>
+            </div>
+            <ul>
+                <li><strong>Relevant Courses:</strong> Data Structures & Algorithms, Object-Oriented Programming, Operating Systems, Fundamentals of Databases, Network Security and Blockchain, Computer Communication Networks, Machine Artificial Intelligence, Engineering Economincs, Embedded Systems, Feedback Control Systems, Digital Logic Design, Engineering Management.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span>Beacon Light Academy (Pearson EDEXCEL IGCSE & IAL)</span>
+                <span>Karachi, Pakistan</span>
+            </div>
+            <div class="entry-subheader">
+                <span>A Levels (Pre-Engineering with IT) & O Levels (Pre-Engineering)</span>
+                <span>2018 – 2022</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+        <h2>Professional Experience</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <span>Artistic Milliners (Pvt) Ltd - AM 05</span>
+                <span>Karachi, Pakistan</span>
+            </div>
+            <div class="entry-subheader">
+                <span>Electrical Engineering Intern</span>
+                <span>June 2025 – August 2025</span>
+            </div>
+            <ul>
+                <li>Observed and analyzed industrial electrical systems, including MV rooms, generators, and utility units, gaining practical insight into power distribution.</li>
+                <li>Engaged in technical sessions regarding PLCs and textile production automation, bridging the gap between academic theory and industrial application.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Academic Experience / Projects -->
+    <section>
+        <h2>Academic Experience</h2>
+
+        <!-- 1. Awal Qadam -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>Awal Qadam – AI Autism Screening Platform</span>
+            </div>
+            <ul>
+                <li>Developed a real-time computer vision system using <strong>MediaPipe</strong> and <strong>Deep LSTM</strong> networks to detect early signs of autism via webcam.</li>
+                <li>Engineered a context-aware logic engine that correlates physical movement with gaze direction to differentiate stimming from social interaction.</li>
+                <li>Built a full-stack web application (React, Python, Supabase) that delivers instant, clinically aligned screening reports to parents.</li>
+                <li><strong>Tech Stack:</strong> Python, React, Supabase, MediaPipe, Deep LSTM.</li>
+            </ul>
+        </div>
+
+        <!-- 2. CareSync -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>CareSync – Hybrid AI Medical Device Support</span>
+            </div>
+            <ul>
+                <li>Architected a hybrid AI mobile application for troubleshooting medical devices, switching intelligently between cloud-based models (Online) and privacy-focused local LLMs (Offline).</li>
+                <li>Integrated <strong>MediaPipe GenAI</strong> for on-device processing to ensure functionality in low-connectivity environments.</li>
+                <li><strong>Tech Stack:</strong> Flutter (Dart), Google Gemini API, SQLite, Provider.</li>
+            </ul>
+        </div>
+
+        <!-- 3. Web3Shield -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>Web3Shield – Smart Contract Auditor</span>
+            </div>
+            <ul>
+                <li>Built an AI-powered SaaS platform using <strong>Next.js</strong> and <strong>Python</strong> to audit smart contracts and detect critical vulnerabilities in real-time.</li>
+                <li>Integrated <strong>Etherscan</strong> and <strong>DEXScreener APIs</strong> to correlate static code analysis with live market data, delivering automated security risk scores.</li>
+                <li><strong>Tech Stack:</strong> Next.js, Python, Etherscan API, DEXScreener API.</li>
+            </ul>
+        </div>
+
+        <!-- 4. Predictive Crop Yield -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>Predictive Crop Yield Modeling</span>
+            </div>
+            <ul>
+                <li>Developed a hybrid <strong>CNN-LSTM</strong> model to predict wheat crop yields using <strong>Sentinel-2</strong> satellite imagery and NASA weather data, achieving <strong>97.9% accuracy</strong>.</li>
+                <li>Automated the analysis of spatial and temporal patterns to forecast harvest outcomes, directly supporting sustainable agriculture (SDG 2).</li>
+                <li><strong>Tech Stack:</strong> Python, CNN-LSTM, Sentinel-2 Data, NASA Weather API.</li>
+            </ul>
+        </div>
+
+        <!-- 5. EquiVigil -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>EquiVigil – AI Financial Auditor</span>
+            </div>
+            <ul>
+                <li>Developed an institutional-grade AI financial auditor that aggregates real-time global market data to perform instant forensic risk analysis.</li>
+                <li>Engineered a multi-model LLM cascade using <strong>Google Gemini</strong> to process complex financial datasets.</li>
+                <li><strong>Tech Stack:</strong> Next.js, Python (FastAPI), Google Gemini, Financial Modeling Prep, Twelve Data.</li>
+            </ul>
+        </div>
+
+        <!-- 6. Founder's Gauntlet -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>The Founder's Gauntlet – Startup Simulation Game</span>
+            </div>
+            <ul>
+                <li>Built a text-based simulation game where players pitch a startup to survive five levels of increasingly difficult AI investors who judge their responses in real-time.</li>
+                <li>Leveraged <strong>Google Gemini 2.0 Flash</strong> for advanced game logic and AI interactions, using native JSON parsing for robust state management.</li>
+                <li><strong>Tech Stack:</strong> Python, Streamlit, Google Gemini 2.0 Flash.</li>
+            </ul>
+        </div>
+
+        <!-- 7. Academic Record Management System -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>Academic Record Management System</span>
+            </div>
+            <ul>
+                <li>Developed a console-based application using <strong>C++</strong> (OOP) and File Handling to securely store, retrieve, and manage student database records.</li>
+                <li><strong>Tech Stack:</strong> C++, File Handling.</li>
+            </ul>
+        </div>
+
+        <!-- 8. Garbage Collection Web Application -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>Garbage Collection Web Application</span>
+            </div>
+            <ul>
+                <li>Constructed a full-featured web application utilizing <strong>HTML</strong> and <strong>CSS</strong> for responsive design, coupled with <strong>JavaScript</strong> for dynamic front-end logic.</li>
+                <li>Implemented secure login authentication, dedicated customer and driver dashboards, and integrated subscription and payment modules.</li>
+                <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript.</li>
+            </ul>
+        </div>
+
+        <!-- 9. Student Portal GUI -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>Student Portal GUI (.NET)</span>
+            </div>
+            <ul>
+                <li>Developed a user-friendly Desktop GUI for the Student Portal using <strong>C#</strong> and the <strong>.NET Framework</strong>.</li>
+                <li>Enhanced the existing C++ management system by providing an intuitive visual interface for efficient student data handling.</li>
+                <li><strong>Tech Stack:</strong> C#, .NET Framework.</li>
+            </ul>
+        </div>
+
+        <!-- 10. DevOps CI/CD -->
+        <div class="entry">
+            <div class="entry-header">
+                <span>DevOps CI/CD Pipeline Implementation</span>
+            </div>
+            <ul>
+                <li>Successfully established a complete CI/CD Pipeline on an <strong>AWS EC2</strong> instance by integrating <strong>Jenkins</strong>, <strong>Git</strong>, <strong>Docker</strong>, and <strong>Ansible</strong>.</li>
+                <li>Automated deployment workflows to streamline software delivery, ensuring consistent code quality and reducing deployment time.</li>
+                <li><strong>Tech Stack:</strong> AWS EC2, Jenkins, Docker, Ansible, Git.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-section">
+            <p><span class="skill-label">Technical Skills:</span> Python, Machine Learning, Generative AI, Full Stack Development, SQL, VS Code, Supabase, SQLite, HTML/CSS, C++, Next.js, React, Flutter, Streamlit, .NET Framework, FastAPI, Google Gemini API, MediaPipe, TensorFlow/Keras, Git, GitHub, JavaScript/TypeScript, AWS (EC2), Docker, Jenkins, Ansible,  ModelSim, DevOps (CI/CD), C#, Dart, Verilog, Embedded Systems, MS Office (Excel/PowerPoint).</p>
+            <p><span class="skill-label">Soft Skills:</span> Decision Making, Effective Communication, Leadership, Result-Oriented, Adaptability, Complex Problem Solving, Self-Awareness, Technical Instruction, Curriculum Design, Project Management, Research & Analysis.</p>
+        </div>
+    </section>
+
+</body>
 </html>
